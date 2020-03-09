@@ -6,7 +6,7 @@
 /*   By: jsalome <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:49:59 by jsalome           #+#    #+#             */
-/*   Updated: 2020/03/07 20:22:27 by jsalome          ###   ########.fr       */
+/*   Updated: 2020/03/10 01:01:58 by Artur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,8 @@ typedef struct	s_fdf
 	t_map	*map;
 	t_pos	*pos;
 	t_mouse	*mouse;
+	int 	animation_c;
+	int 	animation_dir;
 }				t_fdf;
 
 t_fdf			*init_fdf_sruct(void);
@@ -119,5 +121,6 @@ int				mouse_press(int key, int x, int y, void *p);
 int				mouse_release(int key, int x, int y, void *p);
 int				mouse_move(int x, int y, void *p);
 void			read_error(void);
+void			animation(t_fdf *fdf);
 
 #endif

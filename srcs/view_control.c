@@ -6,7 +6,7 @@
 /*   By: jsalome <jsalome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:36:12 by jsalome           #+#    #+#             */
-/*   Updated: 2020/03/07 20:30:45 by jsalome          ###   ########.fr       */
+/*   Updated: 2020/03/10 00:53:15 by Artur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void		zoom_control(int key, t_fdf *data)
 {
 	if (key == 24 || key == 5)
 	{
-		if (data->pos->zoom_limit <= 100)
+		if (data->pos->zoom_limit <= 150)
 		{
 			data->pos->zoom += 1;
 			data->pos->zoom_limit++;
@@ -75,15 +75,36 @@ void		z_zoom_control(int key, t_fdf *data)
 void		angle_control(int key, t_fdf *data)
 {
 	if (key == 13)
-		data->pos->alpha += 0.07;
+		data->pos->alpha += 0.05;
 	else if (key == 1)
-		data->pos->alpha -= 0.07;
+		data->pos->alpha -= 0.05;
 	else if (key == 0)
-		data->pos->beta += 0.07;
+		data->pos->beta += 0.05;
 	else if (key == 2)
-		data->pos->beta -= 0.07;
+		data->pos->beta -= 0.05;
 	else if (key == 12)
-		data->pos->gamma += 0.07;
+		data->pos->gamma += 0.05;
 	else if (key == 14)
-		data->pos->gamma -= 0.07;
+		data->pos->gamma -= 0.05;
+}
+
+void		animation(t_fdf *data)
+{
+	data->pos->beta += 0.05;
+	if (data->animation_c < 10 && !data->animation_dir)
+	{
+		if (!(data->animation_c % 2))
+			data->pos->z_zoom += 0.1;
+		data->animation_c++;
+		if (data->animation_c == 10)
+			data->animation_dir = 1;
+	}
+	else if (data->animation_dir)
+	{
+		if (!(data->animation_c % 2))
+			data->pos->z_zoom -= 0.1;
+		data->animation_c--;
+		if (data->animation_c == 0)
+			data->animation_dir = 0;
+	}
 }

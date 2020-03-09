@@ -6,7 +6,7 @@
 /*   By: jsalome <jsalome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 20:29:07 by jsalome           #+#    #+#             */
-/*   Updated: 2020/03/07 20:33:11 by jsalome          ###   ########.fr       */
+/*   Updated: 2020/03/10 00:59:59 by Artur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,6 @@ void		print_menu(t_fdf *data)
 	mlx_string_put(mlx, win, 55, y += 25, TEXT_COLOR, "Z-Axis - Q/E");
 	mlx_string_put(mlx, win, 15, y += 55, TEXT_COLOR, "Mouse Scroll or Drag:");
 	mlx_string_put(mlx, win, 15, y += 25, TEXT_COLOR, "Zoom or Rotation");
+	mlx_string_put(mlx, win, 15, y += 35, TEXT_COLOR, "Hold 1 for animation");
+	mlx_string_put(mlx, win, 15, y += 55, TEXT_COLOR, "Exit: esc");
 }

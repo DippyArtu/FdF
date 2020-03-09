@@ -6,11 +6,12 @@
 /*   By: jsalome <jsalome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:35:50 by jsalome           #+#    #+#             */
-/*   Updated: 2020/03/07 20:10:02 by jsalome          ###   ########.fr       */
+/*   Updated: 2020/03/10 00:58:23 by Artur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+#include <stdio.h>
 
 static int			file_validation(char *file)
 {
@@ -27,8 +28,9 @@ static int			file_validation(char *file)
 	return (1);
 }
 
-static int			deal_key(int key, t_fdf *data)
+	static int			deal_key(int key, t_fdf *data)
 {
+	printf("%d\n", key);
 	if (key >= 123 && key <= 126)
 		shift_control(key, data);
 	else if (key == 24 || key == 27)
@@ -39,6 +41,8 @@ static int			deal_key(int key, t_fdf *data)
 		angle_control(key, data);
 	else if (key == 34 || key == 35)
 		projection_control(key, data);
+	else if (key == 18)
+		animation(data);
 	else if (key == 53)
 		exit(0);
 	draw(data);

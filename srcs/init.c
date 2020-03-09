@@ -6,7 +6,7 @@
 /*   By: jsalome <jsalome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:35:57 by jsalome           #+#    #+#             */
-/*   Updated: 2020/03/07 19:01:48 by Artur            ###   ########.fr       */
+/*   Updated: 2020/03/10 00:38:07 by Artur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,7 @@ t_fdf		*init_fdf_sruct(void)
 	data->image = mlx_new_image(data->mlx_ptr, WIDTH_WIN, HEIGHT_WIN);
 	data->data_addr = mlx_get_data_addr(data->image, &data->bpp, \
 			&data->size_line, &data->endian);
+	data->animation_c = 1;
+	data->animation_dir = 0;
 	return (data);
 }

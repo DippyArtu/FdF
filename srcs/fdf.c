@@ -6,12 +6,11 @@
 /*   By: jsalome <jsalome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:35:50 by jsalome           #+#    #+#             */
-/*   Updated: 2020/03/10 00:58:23 by Artur            ###   ########.fr       */
+/*   Updated: 2020/03/10 20:03:21 by Artur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-#include <stdio.h>
 
 static int			file_validation(char *file)
 {
@@ -30,7 +29,6 @@ static int			file_validation(char *file)
 
 	static int			deal_key(int key, t_fdf *data)
 {
-	printf("%d\n", key);
 	if (key >= 123 && key <= 126)
 		shift_control(key, data);
 	else if (key == 24 || key == 27)

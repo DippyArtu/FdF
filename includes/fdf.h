@@ -6,7 +6,7 @@
 /*   By: jsalome <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:49:59 by jsalome           #+#    #+#             */
-/*   Updated: 2020/06/21 18:42:58 by Artur            ###   ########.fr       */
+/*   Updated: 2020/06/21 18:43:26 by Artur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,4 @@ int				mouse_move(int x, int y, void *p);
 void			read_error(void);
 void			animation(t_fdf *fdf);
 
-\\i
 #endif

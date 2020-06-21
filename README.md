@@ -3,14 +3,16 @@
 
 ---
 
-<p><img src="https://github.com/DippyArtu/FdF/blob/master/pics/fdf.png" alt="fdf"></p>
 <h1 id="fdf">FdF</h1>
-<p>This program uses Bresenham line drawing algorithm to create a graphical 3D representation of a landscape of a map, given as an argument.</p>
-<p><strong>MacOS support only</strong></p>
+<p><img src="https://github.com/DippyArtu/FdF/blob/master/pics/fdf.png" alt="fdf"></p>
+<div align="center">
+<p></p><h3>This program uses Bresenham line drawing algorithm to create a graphical 3D representation of a landscape of a map, given as an argument.
+<p></p></h3><h5>MacOs support only
+</h5><p></p><p></p></div>
 <h2 id="the-map">The map</h2>
 <ul>
 <li>
-<p>The map is a file, ending by <code>.fdf</code></p>
+<p>The map is a text file, ending by <code>.fdf</code></p>
 </li>
 <li>
 <p>The map can contain numbers only</p>
@@ -40,13 +42,14 @@
  0 0 1 1 0 0
  0 0 0 0 0 0
 </code></pre>
-<h3 id="peaks">Peaks</h3>
+<h5>A collection of maps can be found in the *test_maps* folder.
+</h5><h3 id="peaks">Peaks</h3>
 <p>If the map consists of only two different <strong>z</strong> coordinates (i.e. 0 and 10), the wireframe will be coloured in pink for flat areas and light-green for the peak values.</p>
 <p><img src="https://github.com/DippyArtu/FdF/blob/master/pics/untitled.png" alt="flats"></p>
 <p>On the other hand, if there are multiple point of a varied hights, the program will build a smooth gradient between the lowest and the highest value.</p>
 <p><img src="https://github.com/DippyArtu/FdF/blob/master/pics/untitled-2.png" alt="gradient"></p>
 <h3 id="capabilities">Capabilities</h3>
-<p>The program supports rotations of the figure in 3D, movement of the figure on screen, zoom in and out of the figure as well as increasing or decreasing the value of <strong>z</strong>.</p>
+<p>The program supports rotations of the figure in 3D, movement of the figure on the screen, zooming in and out of the figure as well as increasing or decreasing the value of <strong>z</strong>.</p>
 <h2 id="usage">Usage</h2>
 <p>Compile the program with</p>
 <pre><code>make
